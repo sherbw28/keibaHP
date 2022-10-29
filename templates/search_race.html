@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block body %}
+<p>{{error_text}}</p>
+<form action="/results" method="POST">
+    <label for="開催場">開催場</label>
+    <select name="where" required>
+        <option value="札幌">札幌</option>
+        <option value="函館">函館</option>
+        <option value="福島">福島</option>
+        <option value="新潟">新潟</option>
+        <option value="東京">東京</option>
+        <option value="中山">中山</option>
+        <option value="中京">中京</option>
+        <option value="京都">京都</option>
+        <option value="阪神">阪神</option>
+        <option value="小倉">小倉</option>
+    </select><br>
+    <label for="date">開催日</label>
+    <input type="date" name="when" required><br>
+    <label for="raceNum">レース番号</label>
+    <select name="number" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select><br>
+    <input type="submit" value="検索">
+</form>
+<a href="/">トップに戻る</a>
+{% endblock %}

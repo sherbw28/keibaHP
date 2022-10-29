@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% for pred_test in pred_text_li %}
+<p>{{pred_test}}</p>
+{% endfor %}
+
+<a href="/">トップに戻る</a>
+{% endblock %}
