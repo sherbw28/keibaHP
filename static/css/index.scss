@@ -1,0 +1,81 @@
+// @keyframes slide {
+//     0% {
+//         transform: translateX(100%);
+//     }
+//     100% {
+//         transform: translateX(-100%);
+//         opacity: 0;
+//     }
+// }
+
+// @keyframes fadeout {
+//     0% {
+//         opacity: 1;
+//     }
+
+//     100% {
+//         opacity: 0;
+//     }
+// }
+    
+// .slide {
+//     animation-name: slide;
+//     animation-duration: 5s;
+//     animation-timing-function: ease;
+//     animation-name: fadeout;
+// }
+// @use "mixin" as *;
+@mixin title(){
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+// @mixin h1(){
+//     width: 100%;
+//     margin: 0 auto;
+//     color: $fontcolor;
+//     text-align: center;
+//     font-weight: lighter;
+// }
+
+#description {
+    // background-color: blue;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: left;
+    h1 {
+        font-weight: lighter;
+    }
+
+    p {
+        padding-top: 30px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    // border: 1px solid #666666;
+}
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#howto {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: left;
+
+    h1 {
+        font-weight: lighter;
+    }
+
+    p {
+        padding-top: 30px;
+        width: 90%;
+        margin: 0 auto;
+    }
+}

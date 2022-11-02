@@ -1,6 +1,34 @@
 {% extends 'base.html' %}
 
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{% endblock %}
+
+
 {% block body %}
-<h1>馬予想!</h1>
-<a href="/search_race">検索</a>
+<div id="container">
+    <div class="cover-slide in-view hover-darken">
+        <img src="static/img/horse2.jpg"  class="img-fluid img-zoom">
+    </div>
+</div>
+<div id="description">
+    <h1>ノスダムとは</h1>
+    <p>
+        AIを使ってそのレースに出馬する馬のスコアを相対的に出します。<br>
+        また、データとしては過去13年分をもとに集計しており、騎手・血統・過去戦績・過去タイムなどを元に馬を評価します。<br>
+    </p>
+
+</div>
+<hr>
+<div id="howto">
+    <h1>指数の見方</h1>
+    <p>
+        基本的にスコアが大きい馬が強いと評価しています。<br>
+        また、スコアが2を超える時は軸で考えるなどもできます。<br>
+        しかし新馬戦であったり障害レースの場合はあまりスコアが信用できないので気をつけてください。<br>
+        また、レース前の馬体重もスコア算出の一部となっているので、早くても１時間前あたりなどからしかスコアを出すことができません、ご了承ください。<br>
+        スコアを見ることでこのレースが拮抗しているのか、それともある程度固く決まりそうなのかなどを判断することにも使うことができます。<br>
+    </p>
+</div>
+
 {% endblock %}

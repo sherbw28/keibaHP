@@ -4,11 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-    <title>馬予想くん</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
     {% block head %}{% endblock %}
+    <title>馬予想くん</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="header">
+        <div class="container-fluid" id="headerwidth">
+          <a class="navbar-brand" href="/">ノスダム</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" role="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#description">ノスダムについて</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#howto">指数の見方</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/search_race">レース検索</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">お問い合わせ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
     {% block body %}{% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <div id="footer">
+      <small>© 2022 Eisuke Sato All Rights Reserved.</small>
+    </div>
 </body>
 </html>
