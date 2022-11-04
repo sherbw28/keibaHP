@@ -1,9 +1,17 @@
 {% extends 'base.html' %}
 
-{% block body %}
-{% for pred_test in pred_text_li %}
-<p>{{pred_test}}</p>
-{% endfor %}
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/results.css')}}">
+{% endblock %}
 
-<a href="/">トップに戻る</a>
+
+{% block body %}
+<div class="results_score">
+    {% for pred_test in pred_text_li %}
+    <p>{{pred_test}}</p>
+    {% endfor %}
+</div>
+
+<p class="back_top"><a href="/search_race">別のレースを検索</a></p>
+<p class="back_top"><a href="/">トップに戻る</a></p>
 {% endblock %}
